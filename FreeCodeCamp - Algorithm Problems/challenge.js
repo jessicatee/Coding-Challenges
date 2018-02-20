@@ -1,6 +1,13 @@
+// Free code camp Algorithm Challenges
+// 	1 - Reverse a string
+// 	2 - Check for palindromes 
+//	3 - Find longest word in a string
+// 	4 - Title case a sentence
+
+
+
 // reverse a string challenge
 const reverseString = (str) => str.split('').reverse().join('');
-
 // console.log(reverseString("hello"));
 // console.log(reverseString("yey, i remebered arrow syntax"));
 
@@ -15,7 +22,6 @@ function palindrome(str) {
  		return false;
  	}
 }
-
 //console.log(palindrome("My age is 0, 0 si ega ym."));
 //console.log(palindrome("race car"));
 
@@ -33,5 +39,39 @@ function findLongestWord(str) {
 
   return longestWord;
 }
+
+// return string with first letter of each word capitalised
+function titleCase(str) {
+  let arr = str.split(' ');
+  arr.forEach(function(word, i) {
+  	let capitalised = word.toLowerCase().split('')
+  	capitalised[0] = capitalised[0].toUpperCase();
+  	arr[i] = capitalised.join('');
+  });
+  return arr.join(' ');
+}
+
+console.log(titleCase("I'm a little tea pot"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
