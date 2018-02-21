@@ -9,10 +9,12 @@
        - Return the length of the longest word in the provided sentence.
 	4 - Title case a sentence
        - Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
- 5 - Return largest numbers in array
+  5 - Return largest numbers in array
        - Return an array consisting of the largest number from each provided sub-array.
- 6 - Confirm the ending
+  6 - Confirm the ending
        - Check if a string (first argument, str) ends with the given target string (second argument, target).
+  7 - Repeat a string repeat a string
+       - Repeat a given string (first argument) num times (second argument). Return an empty string if num is not a positive number.     
 */
 
 
@@ -78,3 +80,13 @@ function confirmEnding(str, target) {
 }
 // console.log(confirmEnding("Bastian", "n"));
 
+function repeatStringNumTimes(str, num) {
+  let newStr = "";
+  if (num > 0) {
+    for(let i = 1; i <= num; i++){
+      newStr += str;
+    };
+  };
+  return newStr;
+}
+console.log(repeatStringNumTimes("abc", 3));
